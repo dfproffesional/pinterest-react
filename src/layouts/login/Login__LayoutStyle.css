@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1750px;
     justify-content: center;
-    row-gap: calc(85px * 3.9);
+    row-gap: calc(85px * 4.5);
 }
 
 .login-content .content__title{
