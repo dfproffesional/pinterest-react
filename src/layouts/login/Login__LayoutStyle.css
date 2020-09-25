@@ -1,0 +1,40 @@
+.login-header{
+    display: grid;
+    grid-template-columns: 73% 27%;
+    grid-template-rows: 80px;
+    align-items: center;
+}
+
+.login-content{
+    display: grid;
+    grid-template-columns: 1750px;
+    justify-content: center;
+}
+
+.login-content .content__title{
+    display: inherit;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.login-content .login-colash{
+    display: inherit;
+    grid-template-columns: repeat(6, 230px) 250px;
+    column-gap: 20px;
+
+}
+
+.login-content .colash__item:nth-child(1){transform: translateY(-85px);}
+.login-content .colash__item:nth-child(2){transform: translateY(85px);}
+.login-content .colash__item:nth-child(3){transform: translateY(calc(85px * 2));}
+.login-content .colash__item:nth-child(4){transform: translateY(calc(85px * 4));}
+.login-content .colash__item:nth-child(5){transform: translateY(calc(85px * 2));}
+.login-content .colash__item:nth-child(6){transform: translateY(85px);}
+.login-content .colash__item:nth-child(7){transform: translateY(-85px);}
+
+.login-content .login-colash img{
+    height: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
