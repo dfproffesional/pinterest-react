@@ -1,0 +1,6 @@
+.login-header .header__logo{
+    color: var(--g-colorRed100);
+    font-size: var(--g-heading-font-size-1);
+    font-weight: 600;
+    padding: 0 20px;
+}
