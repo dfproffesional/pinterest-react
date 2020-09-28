@@ -8,22 +8,8 @@ export class Login__Layout extends Component {
         super();
     }
 
-    
-    colashImages(link){
-        return (
-            <>
-                <img src={link} alt="colash-image" />
-                <img src={link} alt="colash-image" />
-                <img src={link} alt="colash-image" />
-                <img src={link} alt="colash-image" />
-                <img src={link} alt="colash-image" />
-                <img src={link} alt="colash-image" />
-            </>
-        );
-    }
-
     render() {
-        const link = 'https://i.pinimg.com/236x/d3/fb/69/d3fb6973cddc1d875dc7c2e04525d2e7.jpg';
+       
         return (
             <>
                 {/*Header*/}
@@ -45,40 +31,22 @@ export class Login__Layout extends Component {
 
                     {/*Colash*/}
                     <div className="login-colash">
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-
-                        <div className="colash__item">
-                            {this.colashImages(link)}
-                        </div>
-                        
+                        {this.props.children[3]}  
                     </div>
                 </main>
                 
                 {/*Footer*/}
                 <footer className="login-footer">
-                    1
+                    <nav className="footer__nav">
+                        <a href="#">Terms of Service</a> 
+                        <a href="#">Privacy Policy</a> 
+                        <a href="#">Help</a>
+                        <a href="#">iPhone App</a> 
+                        <a href="#">Android App</a> 
+                        <a href="#">Users</a> 
+                        <a href="#">Collections</a> 
+                        <a href="#">Explore</a>
+                    </nav>
                 </footer>
                 
             </>
