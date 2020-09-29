@@ -21,6 +21,7 @@
 .login-content .login-colash{
     display: inherit;
     grid-template-columns: repeat(6, 230px) 250px;
+    justify-content: center;
     column-gap: 20px;
 }
 
@@ -41,4 +42,27 @@
     text-decoration: none;
     font-size: 11px;
     color: black;
+}
+
+@media only screen and (max-width: 1800px) {
+    .login-content .login-colash{
+        grid-template-columns: repeat(6, 200px) 220px;
+    }
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .login-content .login-colash{
+        grid-template-columns: repeat(6, 170px) 190px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .login-header{
+        grid-template-columns: 68% 32%;
+    }
+    
+    .login-content .login-colash{
+        grid-template-columns: repeat(6, 140px) 160px;
+    }
 }

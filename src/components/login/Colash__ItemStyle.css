@@ -13,3 +13,16 @@
     margin-bottom: 20px;
     border-radius: 16px;
 }
+
+@media only screen and (max-width: 1600px) {
+    .login-content .login-colash img{
+        height: 320px;
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .login-content .login-colash img{
+        height: 260px;
+    }
+}
