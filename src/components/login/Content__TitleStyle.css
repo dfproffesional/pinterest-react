@@ -12,12 +12,14 @@
 }
 .login-content .title__second p{
     position: absolute;
-    /*transform: translateY(20px);
-    opacity: 0;*/
+    transform: translateY(20px);
+    opacity: 0;
+    transition: ease all .69s;
 }
+
 .login-content .title__second p.effect{
     transform: translateY(0);
-    opacity: 1;
+    opacity: .8;
 }
 .login-content .title__second p:nth-child(1){color: rgb(194, 139, 0);}
 .login-content .title__second p:nth-child(2){color: rgb(97, 140, 123);}
