@@ -11,7 +11,7 @@ function animationTitle(){
 
         setInterval(()=>{
             console.log("Interval");
-            
+
             if( i > 3 ) {
                 i = 0;
                 data[i].classList.add("effect");
@@ -20,7 +20,7 @@ function animationTitle(){
             data[i].classList.remove("effect");
             console.log('remove:');
     
-
+ 
             setTimeout(() => {
                 let j = (i <= 3) ? i : 0;
                 data[j].classList.add("effect");
