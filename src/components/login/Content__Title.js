@@ -25,6 +25,7 @@ const animationInit =
     if(count + 1  <  4) addingEffect(count + 1);
 }
 
+// Subcomponents
 function Title_First(){
     return (
         <div className="title__first">
