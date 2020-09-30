@@ -68,7 +68,7 @@ export function Content__Title() {
         //Inital Effect
         addingEffect(count);
 
-        setTimeId(setTimeout(() => {
+        setTimeout(() => {
 
             // Animate
             animationInit(
@@ -80,9 +80,8 @@ export function Content__Title() {
             // Increment Count
             increseCount(count, setCount);
             console.log(count);
-        }, 5720));
+        }, 5720);
 
-        return clearInterval(timeId);
     }, [count]);
 
     return (
