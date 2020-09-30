@@ -1,75 +1,93 @@
 import React, { Component, useState, useEffect } from 'react';
 import './Content__TitleStyle.css';
 
-
-function animationTitle(){
-    let i = 0;
-    let data = document.querySelectorAll('.title__second p');
-    
-    setTimeout(()=> {
-        data[i].classList.add("effect");
-
-        setInterval(()=>{
-            console.log("Interval");
-
-            if( i > 3 ) {
-                i = 0;
-                data[i].classList.add("effect");
-            }
-
-            data[i].classList.remove("effect");
-            console.log('remove:');
-    
- 
-            setTimeout(() => {
-                let j = (i <= 3) ? i : 0;
-                data[j].classList.add("effect");
-
-                console.log(i);
-                console.log('add');
-    
-            }, 800);
-
-            
-            i++;
-        }, 5000)
-
-        console.log("TimeOut First");
-    }, 160);
-    
+// Functionality
+const increseCount = (count, setCount) =>{
+    if(count === 3) setCount(0)
+    else setCount(count + 1);
 }
 
-export function Content__Title() {
-    const [pagraph, setPagraph] = useState({
-        html: null
-    });
+const addingEffect = (count) => {
+    let html = document.querySelectorAll('.title__second p')[count];
+    html.classList.add("effect");
+}
 
-    const [timeId, setTimeId] = useState(0)
+const removingEffect = (count) => {
+    let html = document.querySelectorAll('.title__second p')[count];
+    html.classList.remove("effect");
+}
 
+const animationInit = 
+(addingEffect, removingEffect, count) => {
+    removingEffect(count);
     
-    useEffect(()=> {
-        animationTitle(pagraph);
-    }, []);
+    if(count + 1 === 4) addingEffect(0);
+    if(count + 1  <  4) addingEffect(count + 1);
+}
 
+function Title_First(){
     return (
-        <>
-            <div className="title__first">
-                Get your next {pagraph.html}
-            </div>
-            <div className="title__second">
-                <p>weeknight dinner idea </p>
-                <p>home decor idea </p>
-                <p>new look outfit </p>
-                <p>green thumb idea </p>
-            </div>
-            <div className="title__transitions">
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-        </>
+        <div className="title__first">
+            Get your next
+        </div>
     )
 }
 
-//export default Content__Title;
+function Title_Second(){
+    return (
+        <div className="title__second">
+            <p>weeknight dinner idea </p>
+            <p>home decor idea </p>
+            <p>new look outfit </p>
+            <p>green thumb idea </p>
+        </div>
+    )
+}
+
+function Title_Transition(){
+    return (
+        <div className="title__transitions">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    )
+}
+
+// Component
+export function Content__Title() {
+    
+    // State Initial
+    const [timeId, setTimeId] = useState(0);
+    const [count, setCount] = useState(0);
+
+    // Dimanic
+    useEffect(()=> {
+        //Inital Effect
+        addingEffect(count);
+
+        setTimeId(setTimeout(() => {
+
+            // Animate
+            animationInit(
+                addingEffect, 
+                removingEffect,
+                count
+            );
+
+            // Increment Count
+            increseCount(count, setCount);
+            console.log(count);
+        }, 5720));
+
+    }, [count]);
+
+    return (
+        <>
+            <Title_First />
+            <Title_Second />
+            <Title_Transition />
+        </>
+    )
+}

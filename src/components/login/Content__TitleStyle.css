@@ -12,15 +12,41 @@
 }
 .login-content .title__second p{
     position: absolute;
-    transform: translateY(20px);
     opacity: 0;
-    transition: ease all .69s;
+    animation-duration: 5.69s;
+    animation-iteration-count: 1;
+
+    /*transform: translateY(20px);
+    opacity: 0;
+    transition: ease all .69s;*/
 }
 
 .login-content .title__second p.effect{
-    transform: translateY(0);
-    opacity: .8;
+    animation-name: login-title;
+
+    /*transform: translateY(0);
+    opacity: .8;*/
 }
+
+@keyframes login-title{
+    0% {
+        transform: translateY(20px);
+    }
+    12.12%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    87.87%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+
 .login-content .title__second p:nth-child(1){color: rgb(194, 139, 0);}
 .login-content .title__second p:nth-child(2){color: rgb(97, 140, 123);}
 .login-content .title__second p:nth-child(3){color: rgb(0, 118, 211);}
