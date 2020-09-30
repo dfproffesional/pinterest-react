@@ -81,6 +81,7 @@ export function Content__Title() {
             console.log(count);
         }, 5720));
 
+        return clearInterval(timeId);
     }, [count]);
 
     return (
