@@ -80,7 +80,7 @@ export function Content__Title() {
             // Increment Count
             increseCount(count, setCount);
             console.log(count);
-        }, 5720);
+        }, 6000);
 
     }, [count]);
 
