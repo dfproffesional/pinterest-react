@@ -1,7 +1,7 @@
 {
-  "name": "pinterest",
+  "name": "pinterest-project",
   "version": "1.0.0",
-  "description": "Practice to Reactjs to build Pinterest.",
+  "description": "Practice to learn Reactjs",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
