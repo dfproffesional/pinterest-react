@@ -6,9 +6,9 @@ const disableScroll = () => {
 };
 
 export function Login__Layout(props) {
-  useEffect(() => {
-    window.addEventListener("scroll", disableScroll);
-  });
+  window.addEventListener("scroll", disableScroll);
+
+  useEffect(() => {});
   return (
     <>
       {/*Header*/}
